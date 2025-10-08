@@ -7,17 +7,11 @@ class Solution {
             if(!visited[i]){
                 dum.add(strs[i]);
                 visited[i]=true;
-            int l=i+1,r=strs.length-1;
-            while(l<=r){
-                if(!visited[l] && issame(strs[i],strs[l])){
-                    dum.add(strs[l]);
-                    visited[l]=true;
+            for(int j=i+1;j<strs.length;j++){
+                if(!visited[j] && issame(strs[i],strs[j])){
+                    dum.add(strs[j]);
+                    visited[j]=true;
                 }
-                if(l!=r && !visited[r] && issame(strs[i],strs[r])){
-                    dum.add(strs[r]);
-                    visited[r]=true;
-                }
-                l++;r--;
             }
             }
             if(dum.size()>0)

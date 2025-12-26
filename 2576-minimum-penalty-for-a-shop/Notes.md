@@ -1,0 +1,1 @@
+<h2>minimum-penalty-for-a-shop Notes</h2><hr>[ Time taken: 32 m 39 s ]

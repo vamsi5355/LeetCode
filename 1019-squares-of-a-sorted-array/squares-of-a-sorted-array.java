@@ -1,9 +1,21 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        for(int i=0;i<nums.length;i++){
-            nums[i]*=nums[i];
+        int l = 0, r = nums.length - 1;
+        int k = nums.length - 1;
+        int[] res = new int[nums.length];
+
+        while (l <= r) {
+            int leftSq = nums[l] * nums[l];
+            int rightSq = nums[r] * nums[r];
+
+            if (leftSq > rightSq) {
+                res[k--] = leftSq;
+                l++;
+            } else {
+                res[k--] = rightSq;
+                r--;
+            }
         }
-        Arrays.sort(nums);
-        return nums;
+        return res;
     }
 }

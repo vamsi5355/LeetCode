@@ -9,8 +9,7 @@ class Solution {
     public void backtrack(TreeNode node, StringBuilder sb) {
         if (node == null) return;
 
-        int len = sb.length();  
-
+        int len = sb.length();   
         sb.append(node.val);
 
         if (node.left == null && node.right == null) {
@@ -21,6 +20,6 @@ class Solution {
             backtrack(node.right, sb);
         }
 
-        sb.setLength(len);  
+        sb.setLength(len);
     }
 }
